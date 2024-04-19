@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <h4>List</h4>
+      <h4>List all posts</h4>
       <ul class="list-group">
         <li class="list-group-item"
           :class="{ active: index == currentIndex }"
@@ -111,11 +111,6 @@ export default {
       console.log(e);
     });
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ec12add597326bffcdc72ea33f96da4abc94e129
   },
   mounted() {
     this.retrievePosts();

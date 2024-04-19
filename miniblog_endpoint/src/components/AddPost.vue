@@ -1,6 +1,7 @@
 <template>
-    <h4>Add New Post</h4>
+    
     <div class="submit-form">
+      <h4>Add New Post</h4>
       <div v-if="!submitted">
         <div class="form-group">
           <label for="title">Title</label>
