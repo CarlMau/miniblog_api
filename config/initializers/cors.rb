@@ -14,3 +14,15 @@
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 #   end
 # end
+
+# config/initializers/cors.rb
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins 'http://localhost:8080' # Reemplaza con el origen de tu aplicación Vue
+      resource '/api/*',
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head],
+        credentials: true
+    end
+  end
+  
