@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
     <h4>Add New Post</h4>
+=======
+  <h4>Add new post</h4>
+>>>>>>> ec12add597326bffcdc72ea33f96da4abc94e129
     <div class="submit-form">
       <div v-if="!submitted">
         <div class="form-group">

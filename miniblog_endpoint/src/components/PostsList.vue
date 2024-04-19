@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <h4>Posts List</h4>
+      <h4>List</h4>
       <ul class="list-group">
         <li class="list-group-item"
           :class="{ active: index == currentIndex }"
@@ -35,14 +35,18 @@
           <label><strong>Title:</strong></label> {{ currentPost.title }}
         </div>
         <div>
-          <label><strong>Description:</strong></label> {{ currentPost.content }}
+          <label><strong>Content:</strong></label> {{ currentPost.content }}
         </div>
 
         <router-link :to="'/posts/' + currentPost.id" class="badge badge-warning">Edit</router-link>
       </div>
       <div v-else>
         <br />
+<<<<<<< HEAD
         <p>Click on a Post to see details</p>
+=======
+        <p>Click on a post to see details</p>
+>>>>>>> ec12add597326bffcdc72ea33f96da4abc94e129
       </div>
     </div>
   </div>
@@ -111,6 +115,11 @@ export default {
       console.log(e);
     });
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ec12add597326bffcdc72ea33f96da4abc94e129
   },
   mounted() {
     this.retrievePosts();
