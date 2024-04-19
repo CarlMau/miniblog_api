@@ -2,11 +2,11 @@
   <div class="list row">
     <div class="col-md-8">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Search by title"
-          v-model="title"/>
+        <input type="text" class="form-control" placeholder="Search by Id"
+          v-model="id"/>
         <div class="input-group-append">
           <button class="btn btn-outline-secondary" type="button"
-            @click="searchTitle"
+            @click="searchId"
           >
             Search
           </button>
@@ -42,7 +42,7 @@
       </div>
       <div v-else>
         <br />
-        <p>Please click on a Post...</p>
+        <p>Click on a Post to see details</p>
       </div>
     </div>
   </div>
@@ -85,17 +85,32 @@ export default {
     },
 
     
-    searchTitle() {
-      PostDataService.findByTitle(this.title)
-        .then(response => {
-          this.posts = response.data;
-          this.setActivePost(null);
-          console.log(response.data);
-        })
-        .catch(e => {
-          console.log(e);
-        });
-    }
+    searchId() {
+  PostDataService.findById(this.id)
+    .then(response => {
+      // Clear the existing posts before adding new ones
+      this.posts = [];
+      
+      // Check if there are search results
+      if (response.data) {
+        // Add the search results to the posts array
+        this.posts.push(response.data);
+        
+        // Set the first post in the search results as the active post
+        if (this.posts.length > 0) {
+          this.setActivePost(this.posts[0], 0);
+        }
+      } else {
+        // If no search results found, reset active post
+        this.setActivePost(null, -1);
+      }
+      
+      console.log(response.data);
+    })
+    .catch(e => {
+      console.log(e);
+    });
+}
   },
   mounted() {
     this.retrievePosts();
