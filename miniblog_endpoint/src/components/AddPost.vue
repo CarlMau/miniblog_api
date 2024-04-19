@@ -1,4 +1,5 @@
 <template>
+  <h4>Add new post</h4>
     <div class="submit-form">
       <div v-if="!submitted">
         <div class="form-group">
@@ -14,15 +15,17 @@
         </div>
   
         <div class="form-group">
-          <label for="description">Content</label>
-          <input
-            class="form-control wider-input"
-            id="description"
-            required
-            v-model="post.content"
-            name="description"
-          />
-        </div>
+  <label for="description">Content</label>
+  <textarea
+    class="form-control"
+    id="description"
+    required
+    v-model="post.content"
+    name="description"
+    rows="5" 
+    style="resize: vertical;" 
+  ></textarea>
+</div>
   
         <button @click="savePost" class="btn btn-success">Submit</button>
       </div>
