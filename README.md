@@ -38,6 +38,6 @@ All the routes are straightforward and clearly defined within your Rails applica
 
 For the Vue.js project, you need to have Node.js installed on your system. Then, you can install Vue.js and other dependencies using Yarn or npm. After installing dependencies with yarn install (or npm install), you can run the Vue.js development server with yarn serve (or npm run serve). By default, the Vue.js application will be accessible at http://localhost:8080/. This allows you to interact with your frontend application locally.
 
-
+For everything to work as expected you should have the API service running alongside the Vue.js application
 
 * ...
