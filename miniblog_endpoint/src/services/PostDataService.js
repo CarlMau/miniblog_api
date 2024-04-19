@@ -21,6 +21,10 @@ class PostDataService {
     return http.delete(`/posts/${id}`);
   }
 
+  findById(id) {
+    return http.get(`/posts/${id}`);
+  }
+
 
 }
 

@@ -16,7 +16,7 @@
         <div class="form-group">
           <label for="description">Content</label>
           <input
-            class="form-control"
+            class="form-control wider-input"
             id="description"
             required
             v-model="post.content"
