@@ -7,6 +7,11 @@ const routes =  [
     name: "posts",
     component: () => import("./components/PostsList")
   },
+  {
+    path: "/add",
+    name: "add",
+    component: () => import("./components/AddPost")
+  }
   
 ];
 

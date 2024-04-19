@@ -22,6 +22,7 @@
           :key="index"
           @click="setActivePost(post, index)"
         >
+         ID #{{ post.id }}
           {{ post.title }}
         </li>
       </ul>
@@ -29,7 +30,7 @@
     </div>
     <div class="col-md-6">
       <div v-if="currentPost">
-        <h4>Post</h4>
+        <h4>Detail</h4>
         <div>
           <label><strong>Title:</strong></label> {{ currentPost.title }}
         </div>
