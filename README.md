@@ -40,4 +40,6 @@ For the Vue.js project, you need to have Node.js installed on your system. Then,
 
 For everything to work as expected you should have the API service running alongside the Vue.js application
 
+miniblog_api ------Main Folder, Ruby on rails API
+      miniblog_endpoint -----------FrontEnd, Vue.js
 * ...
