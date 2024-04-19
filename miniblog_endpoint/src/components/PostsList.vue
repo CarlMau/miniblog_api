@@ -42,11 +42,7 @@
       </div>
       <div v-else>
         <br />
-<<<<<<< HEAD
         <p>Click on a Post to see details</p>
-=======
-        <p>Click on a post to see details</p>
->>>>>>> ec12add597326bffcdc72ea33f96da4abc94e129
       </div>
     </div>
   </div>
